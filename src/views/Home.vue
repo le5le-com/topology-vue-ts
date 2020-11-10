@@ -1,18 +1,27 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <!-- 使用topology组件 -->
+    <topology />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+
+// 导入topology-vue组件
+import topology from 'topology-vue';
+// 需要导入topology-vue.css
+import 'topology-vue/topology-vue.css';
 
 @Component({
   components: {
-    HelloWorld,
+    topology,
   },
 })
 export default class Home extends Vue {}
 </script>
+<style lang="scss">
+.home {
+  height: 100vh;
+}
+</style>
