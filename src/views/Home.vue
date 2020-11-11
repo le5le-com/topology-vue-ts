@@ -18,7 +18,9 @@ import 'topology-vue/topology-vue.css';
     topology,
   },
 })
-export default class Home extends Vue {}
+export default class Home extends Vue {
+  
+}
 </script>
 <style lang="scss">
 .home {
