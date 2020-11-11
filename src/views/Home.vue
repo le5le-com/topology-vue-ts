@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <!-- 使用topology组件 -->
-    <topology :configs="topologyConfigs" />
+    <topology :configs="topologyConfigs" :user="user" @event="onEvent" />
   </div>
 </template>
 
@@ -76,6 +76,21 @@ export default class Home extends Vue {
       ],
     },
   };
+
+  user: any = {
+    username: 'le5le',
+  };
+
+  onEvent(e:{ name: string; params: any }) {
+      switch (e.name) {
+        case "logout":
+          this.user = null;
+          // Do sth.
+          break;
+        // ...
+        // ...
+      }
+    },
 }
 </script>
 <style lang="scss">
