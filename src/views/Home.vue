@@ -1,7 +1,12 @@
 <template>
   <div class="home">
     <!-- 使用topology组件 -->
-    <topology :configs="topologyConfigs" :user="user" @event="onEvent" />
+    <topology
+      :configs="topologyConfigs"
+      :materials="materials"
+      :user="user"
+      @event="onEvent"
+    />
   </div>
 </template>
 
@@ -12,6 +17,8 @@ import { Component, Vue } from 'vue-property-decorator';
 import topology from 'topology-vue';
 // 需要导入topology-vue.css
 import 'topology-vue/topology-vue.css';
+
+import { defalutMaterials, userMaterials, images } from './data';
 
 @Component({
   components: {
@@ -83,12 +90,48 @@ export default class Home extends Vue {
     username: 'le5le',
   };
 
+  materials = {
+    system: defalutMaterials,
+    user: userMaterials,
+    images,
+    uploadUrl: '/api/file',
+    uploadHeaders: {
+      Authorization: 'your token',
+    },
+    uploadParams: {
+      mydata: 1,
+    },
+  };
+
   onEvent(e: { name: string; params: any }) {
     switch (e.name) {
       case 'logout':
         this.user = null;
         // Do sth.
         break;
+
+      case 'openMaterial':
+        // 点击了图标工具栏分组
+        console.log('openMaterial', e.params);
+        // Do sth.
+        break;
+
+      case 'addMaterial':
+        // Do sth. For example:
+        this.$router.push({
+          path: '/',
+          query: { component: '1' },
+        });
+        break;
+
+      case 'editMaterial':
+        // Do sth. For example:
+        this.$router.push({
+          path: '/',
+          query: { id: e.params.id, component: '1' },
+        });
+        break;
+
       // ...
       // ...
     }
