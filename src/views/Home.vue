@@ -106,17 +106,19 @@ export default class Home extends Vue {
   onEvent(e: { name: string; params: any }) {
     switch (e.name) {
       case 'logout':
+        // 退出登录
         this.user = null;
         // Do sth.
         break;
 
-      case 'openMaterial':
-        // 点击了图标工具栏分组
-        console.log('openMaterial', e.params);
+      case 'openMaterialGroup':
+        // 展开/折叠图标工具栏分组
+        console.log('openMaterialGroup', e.params);
         // Do sth.
         break;
 
       case 'addMaterial':
+        // 添加“我的组件”
         // Do sth. For example:
         this.$router.push({
           path: '/',
@@ -125,10 +127,35 @@ export default class Home extends Vue {
         break;
 
       case 'editMaterial':
+        // 编辑“我的组件”
         // Do sth. For example:
         this.$router.push({
           path: '/',
           query: { id: e.params.id, component: '1' },
+        });
+        break;
+
+      case 'open':
+        // 导航菜单configs.menus里面定义的action
+        // 比如这里表示打开文件
+        break;
+      case 'save':
+        // 导航菜单configs.menus里面定义的action
+        // 比如这里表示保存文件
+        break;
+      case 'addImageUrl':
+        // 在“我的图片”里面添加了一张新图片
+        // this.addImageUrl(e.params);
+        break;
+      case 'deleteImage':
+        // 在“我的图片”里面删除了一张图片
+        // this.deleteImage(e.params);
+        break;
+      case 'preview':
+        // 点击工具栏“预览”
+        this.$router.push({
+          path: '/preview',
+          query: { id: 'xxx', r: '1' },
         });
         break;
 
