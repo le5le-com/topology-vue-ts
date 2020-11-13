@@ -84,6 +84,30 @@ export default class Home extends Vue {
       {},
       { name: '退出', action: 'logout' },
     ],
+    dataOptionsFn: (pen: any, key: string, value: string) => {
+      // pen - 当前画笔对象
+      // key - 表单输入左侧的属性名
+      // value - 仅下拉搜索时有效，当前输入文本
+      console.log('dataOptionsFn', pen, key, value);
+      // ************
+      // 根据实际业务场景 + 参数返回数组对象。
+      // Do sth.
+      // ************
+      return [
+        {
+          label: '选项1',
+          value: 1,
+        },
+        {
+          label: '选项2',
+          value: 2,
+        },
+        {
+          label: '选项3',
+          value: 3,
+        },
+      ];
+    },
   };
 
   user: any = {
