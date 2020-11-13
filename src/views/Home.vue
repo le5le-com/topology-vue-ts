@@ -5,6 +5,7 @@
       :configs="topologyConfigs"
       :materials="materials"
       :user="user"
+      :data="data"
       @event="onEvent"
     />
   </div>
@@ -127,6 +128,20 @@ export default class Home extends Vue {
     },
   };
 
+  data: any = {};
+
+  created() {
+    const data = (window as any).topologyData;
+    // 预览页返回，存在缓存数据
+    if (data) {
+      this.data = { data: Object.assign({}, data) };
+      setTimeout(() => {
+        (window as any).topologyData = null;
+      }, 200);
+    } else {
+    }
+  }
+
   onEvent(e: { name: string; params: any }) {
     switch (e.name) {
       case 'logout':
@@ -177,6 +192,9 @@ export default class Home extends Vue {
         break;
       case 'preview':
         // 点击工具栏“预览”
+
+        // 保存当前编辑数据，方便预览时直接打开
+        (window as any).topologyData = (window as any).topology.data;
         this.$router.push({
           path: '/preview',
           query: { id: 'xxx', r: '1' },
