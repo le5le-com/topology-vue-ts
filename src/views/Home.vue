@@ -27,11 +27,12 @@ import { defalutMaterials, userMaterials, images } from './data';
   },
 })
 export default class Home extends Vue {
-  license = {
-    key: '企业版授权码',
-    value: '国产原创开源发展做出我们的贡献',
-  };
+
   topologyConfigs = {
+    license: {
+      key: '企业版授权码',
+      value: '国产原创开源发展做出我们的贡献',
+    },
     logo: {
       img: 'http://topology.le5le.com/assets/img/favicon.ico',
       url: 'http://topology.le5le.com',
