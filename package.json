@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "vue-cli-service serve",
+    "start": "vue-cli-service serve --open  --copy",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
@@ -18,7 +18,7 @@
     "vue-property-decorator": "^8.4.2",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0",
-    "topology-vue": "^0.1.7",
+    "topology-vue": "^0.2.9",
     "ant-design-vue": "^1.6.5",
     "axios": "^0.20.0",
     "copy-webpack-plugin": "^6.2.1",

@@ -21,6 +21,9 @@ import 'topology-vue/topology-vue.css';
 
 import { defalutMaterials, userMaterials, images } from './data';
 
+import { register } from '../components/myShape';
+register();
+
 @Component({
   components: {
     topology,

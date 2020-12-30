@@ -5,6 +5,20 @@ export const defalutMaterials = [
     show: true,
     list: [
       {
+        name: 'thermometer',
+        icon: 't-icon t-progress',
+        id: -1,
+        data: {
+          id: 'aaaaaaaa',
+          name: 'thermometer',
+          rect: {
+            width: 40,
+            height: 200
+          },
+          value: 20
+        }
+      },
+      {
         name: 'rectangle',
         icon: 't-icon t-rect',
         id: 1,
