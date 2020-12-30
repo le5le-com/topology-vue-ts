@@ -19,6 +19,20 @@ export const defalutMaterials = [
         }
       },
       {
+        name: 'image',
+        image: '/favicon.ico',
+        id: 0,
+        data: {
+          text: '',
+          rect: {
+            width: 100,
+            height: 100
+          },
+          name: 'image',
+          image: '/favicon.ico'
+        }
+      },
+      {
         name: 'rectangle',
         icon: 't-icon t-rect',
         id: 1,
