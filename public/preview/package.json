@@ -1,0 +1,16 @@
+{
+  "name": "topology-view",
+  "version": "1.0.0",
+  "description": "A preview page for le5le topology.",
+  "scripts": {
+    "start": "http-server"
+  },
+  "dependencies": {
+    "topology-bundle": "latest"
+  },
+  "devDependencies": {
+    "http-server": "latest"
+  },
+  "author": "le5le.com",
+  "license": "ISC"
+}

@@ -1,23 +1,25 @@
+export const defalutMaterialTabs = [
+  {
+    name: '图纸',
+    component: 'MaterialTopology'
+  },
+  {
+    name: '系统组件',
+    component: 'MaterialSystem',
+    active: true
+  },
+  {
+    name: '我创建的',
+    component: 'MaterialUser'
+  }
+];
+
 export const defalutMaterials = [
   {
     name: '基本形状',
     expand: true,
     show: true,
     list: [
-      {
-        name: 'image',
-        image: '/favicon.ico',
-        id: 0,
-        data: {
-          text: '',
-          rect: {
-            width: 100,
-            height: 100
-          },
-          name: 'image',
-          image: '/favicon.ico'
-        }
-      },
       {
         name: 'rectangle',
         icon: 't-icon t-rect',
@@ -186,6 +188,7 @@ export const defalutMaterials = [
             width: 100,
             height: 100
           },
+          type: 1,
           name: 'line'
         }
       },
@@ -781,7 +784,7 @@ export const defalutMaterials = [
     ]
   },
   {
-    name: '图表控件（echarts）',
+    name: '图表控件',
     expand: true,
     show: true,
     list: [
@@ -979,1164 +982,132 @@ export const defalutMaterials = [
   }
 ];
 
-export const userMaterials = [
-  {
-    name: 'componentData内容为画布数据topology.toComponent函数执行结果',
-    image: 'http://topology.le5le.com/assets/img/favicon.ico',
-    componentData: {
-      animateCycleIndex: 0,
-      animateDuration: 0,
-      animateFrames: [],
-      animateType: '',
-      borderRadius: 0,
+export const logo = {
+  img: require('@/assets/logo.png'),
+  url: 'http://topology.le5le.com',
+  target: '_blank'
+};
+
+export const iconMenus: any = {
+  back: {
+    icon: 't-icon t-angle-left'
+  },
+  left: [
+    {
+      name: '文件',
+      icon: 't-icon t-folder',
       children: [
-        {
-          animateCycleIndex: 0,
-          animateDuration: 0,
-          animateFrames: [],
-          animateType: '',
-          bkType: 0,
-          borderRadius: 10,
-          dash: 0,
-          data: '',
-          eventFns: ['link', 'doAnimate', 'doFn', 'doWindowFn'],
-          events: [],
-          fillStyle: '',
-          font: {
-            background: '',
-            color: '#222',
-            fontFamily:
-              '"Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial',
-            fontSize: 12,
-            fontStyle: 'normal',
-            fontWeight: 'normal',
-            lineHeight: 1.5,
-            textAlign: 'center',
-            textBaseline: 'middle'
-          },
-          fullIconRect: {
-            center: {
-              x: 446,
-              y: 276
-            },
-            ex: 586,
-            ey: 326,
-            height: 100,
-            width: 280,
-            x: 306,
-            y: 226
-          },
-          fullTextRect: {
-            center: {
-              x: 446,
-              y: 276
-            },
-            ex: 586,
-            ey: 326,
-            height: 100,
-            width: 280,
-            x: 306,
-            y: 226
-          },
-          globalAlpha: 1,
-          gradientAngle: 0,
-          gradientRadius: 0.01,
-          iconRect: {
-            center: {
-              x: 356,
-              y: 276
-            },
-            ex: 406,
-            ey: 326,
-            height: 100,
-            width: 100,
-            x: 306,
-            y: 226
-          },
-          iconSize: 0,
-          id: 'cc43e7b',
-          imageAlign: 'center',
-          lineDashOffset: 0,
-          lineWidth: 1,
-          locked: 0,
-          name: 'rectangle',
-          offsetRotate: 0,
-          paddingBottom: 0,
-          paddingBottomNum: 0,
-          paddingLeft: 0,
-          paddingLeftNum: 0,
-          paddingRight: 0,
-          paddingRightNum: 0,
-          paddingTop: 0,
-          paddingTopNum: 0,
-          parentId: 'dde822',
-          rect: {
-            center: {
-              x: 446,
-              y: 276
-            },
-            ex: 586,
-            ey: 326,
-            height: 100,
-            width: 280,
-            x: 306,
-            y: 226
-          },
-          rectInParent: {
-            height: '100%',
-            rect: {
-              center: {
-                x: 446,
-                y: 276
-              },
-              ex: 586,
-              ey: 326,
-              height: 100,
-              width: 280,
-              x: 306,
-              y: 226
-            },
-            rotate: 0,
-            width: '93.33333333333333%',
-            x: '0%',
-            y: '0%'
-          },
-          rotate: 0,
-          stand: false,
-          strokeStyle: '#222',
-          tags: [],
-          text: '',
-          textOffsetX: 0,
-          textOffsetY: 0,
-          textRect: {
-            center: {
-              x: 496,
-              y: 276
-            },
-            ex: 586,
-            ey: 326,
-            height: 100,
-            width: 180,
-            x: 406,
-            y: 226
-          },
-          type: 0,
-          visible: true,
-          zRotate: 0
-        },
-        {
-          animateCycleIndex: 0,
-          animateDuration: 0,
-          animateFrames: [],
-          animateType: '',
-          bkType: 0,
-          borderRadius: 10,
-          dash: 0,
-          data: '',
-          eventFns: ['link', 'doAnimate', 'doFn', 'doWindowFn'],
-          events: [],
-          fillStyle: '#1890ffff',
-          font: {
-            background: '',
-            color: '#222',
-            fontFamily:
-              '"Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial',
-            fontSize: 12,
-            fontStyle: 'normal',
-            fontWeight: 'normal',
-            lineHeight: 1.5,
-            textAlign: 'center',
-            textBaseline: 'middle'
-          },
-          fullIconRect: {
-            center: {
-              x: 316,
-              y: 276
-            },
-            ex: 326,
-            ey: 326,
-            height: 100,
-            width: 20,
-            x: 306,
-            y: 226
-          },
-          fullTextRect: {
-            center: {
-              x: 316,
-              y: 276
-            },
-            ex: 326,
-            ey: 326,
-            height: 100,
-            width: 20,
-            x: 306,
-            y: 226
-          },
-          globalAlpha: 1,
-          gradientAngle: 0,
-          gradientRadius: 0.01,
-          iconRect: {
-            center: {
-              x: 356,
-              y: 276
-            },
-            ex: 406,
-            ey: 326,
-            height: 100,
-            width: 100,
-            x: 306,
-            y: 226
-          },
-          iconSize: 0,
-          id: '6db48f07',
-          imageAlign: 'center',
-          lineDashOffset: 0,
-          lineWidth: 0,
-          locked: 0,
-          name: 'rectangle',
-          offsetRotate: 0,
-          paddingBottom: 0,
-          paddingBottomNum: 0,
-          paddingLeft: 0,
-          paddingLeftNum: 0,
-          paddingRight: 0,
-          paddingRightNum: 0,
-          paddingTop: 0,
-          paddingTopNum: 0,
-          parentId: 'dde822',
-          rect: {
-            center: {
-              x: 316,
-              y: 276
-            },
-            ex: 326,
-            ey: 326,
-            height: 100,
-            width: 20,
-            x: 306,
-            y: 226
-          },
-          rectInParent: {
-            height: '100%',
-            rect: {
-              center: {
-                x: 316,
-                y: 276
-              },
-              ex: 326,
-              ey: 326,
-              height: 100,
-              width: 20,
-              x: 306,
-              y: 226
-            },
-            rotate: 0,
-            width: '6.666666666666667%',
-            x: '0%',
-            y: '0%'
-          },
-          rotate: 0,
-          rotatedAnchors: [
-            {
-              direction: 4,
-              x: 306,
-              y: 276
-            },
-            {
-              direction: 1,
-              x: 316,
-              y: 226
-            },
-            {
-              direction: 2,
-              x: 326,
-              y: 276
-            },
-            {
-              direction: 3,
-              x: 316,
-              y: 326
-            }
-          ],
-          stand: false,
-          strokeStyle: 'transparent',
-          tags: [],
-          text: '',
-          textOffsetX: 0,
-          textOffsetY: 0,
-          textRect: {
-            center: {
-              x: 366,
-              y: 276
-            },
-            ex: 326,
-            ey: 326,
-            height: 100,
-            width: -80,
-            x: 406,
-            y: 226
-          },
-          type: 0,
-          visible: true,
-          zRotate: 0
-        },
-        {
-          TID: 'cacbba',
-          anchors: [
-            {
-              direction: 4,
-              x: 321,
-              y: 276
-            },
-            {
-              direction: 1,
-              x: 332,
-              y: 227
-            },
-            {
-              direction: 2,
-              x: 343,
-              y: 276
-            },
-            {
-              direction: 3,
-              x: 332,
-              y: 325
-            }
-          ],
-          animateCycleIndex: 0,
-          animateDuration: 0,
-          animateFrames: [],
-          animateType: '',
-          bkType: 0,
-          borderRadius: 0,
-          dash: 0,
-          data: '',
-          eventFns: ['link', 'doAnimate', 'doFn', 'doWindowFn'],
-          events: [],
-          fillStyle: '#fff',
-          font: {
-            background: '',
-            color: '#222',
-            fontFamily:
-              '"Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial',
-            fontSize: 12,
-            fontStyle: 'normal',
-            fontWeight: 'normal',
-            lineHeight: 1.5,
-            textAlign: 'center',
-            textBaseline: 'middle'
-          },
-          fullIconRect: {
-            center: {
-              x: 332,
-              y: 276
-            },
-            ex: 343,
-            ey: 325,
-            height: 98,
-            width: 22,
-            x: 321,
-            y: 227
-          },
-          fullTextRect: {
-            center: {
-              x: 332,
-              y: 276
-            },
-            ex: 343,
-            ey: 325,
-            height: 98,
-            width: 22,
-            x: 321,
-            y: 227
-          },
-          globalAlpha: 1,
-          gradientAngle: 0,
-          gradientRadius: 0.01,
-          iconRect: {
-            center: {
-              x: 370,
-              y: 276
-            },
-            ex: 419,
-            ey: 325,
-            height: 98,
-            width: 98,
-            x: 321,
-            y: 227
-          },
-          iconSize: 0,
-          id: '3dd5e967',
-          imageAlign: 'center',
-          lineDashOffset: 0,
-          lineWidth: 0,
-          locked: 0,
-          name: 'rectangle',
-          offsetRotate: 0,
-          paddingBottom: 0,
-          paddingBottomNum: 0,
-          paddingLeft: 0,
-          paddingLeftNum: 0,
-          paddingRight: 0,
-          paddingRightNum: 0,
-          paddingTop: 0,
-          paddingTopNum: 0,
-          parentId: 'dde822',
-          rect: {
-            center: {
-              x: 332,
-              y: 276
-            },
-            ex: 343,
-            ey: 325,
-            height: 98,
-            width: 22,
-            x: 321,
-            y: 227
-          },
-          rectInParent: {
-            height: '98%',
-            rect: {
-              center: {
-                x: 332,
-                y: 276
-              },
-              ex: 343,
-              ey: 325,
-              height: 98,
-              width: 22,
-              x: 321,
-              y: 227
-            },
-            rotate: 0,
-            width: '7.333333333333333%',
-            x: '5%',
-            y: '1%'
-          },
-          rotate: 0,
-          rotatedAnchors: [
-            {
-              direction: 4,
-              x: 321,
-              y: 276
-            },
-            {
-              direction: 1,
-              x: 332,
-              y: 227
-            },
-            {
-              direction: 2,
-              x: 343,
-              y: 276
-            },
-            {
-              direction: 3,
-              x: 332,
-              y: 325
-            }
-          ],
-          stand: false,
-          strokeStyle: 'transparent',
-          tags: [],
-          text: '',
-          textOffsetX: 0,
-          textOffsetY: 0,
-          textRect: {
-            center: {
-              x: 381,
-              y: 276
-            },
-            ex: 343,
-            ey: 325,
-            height: 98,
-            width: -76,
-            x: 419,
-            y: 227
-          },
-          type: 0,
-          visible: true,
-          zRotate: 0
-        },
-        {
-          TID: 'cacbba',
-          anchors: [
-            {
-              direction: 4,
-              x: 343,
-              y: 256
-            },
-            {
-              direction: 1,
-              x: 393,
-              y: 241
-            },
-            {
-              direction: 2,
-              x: 443,
-              y: 256
-            },
-            {
-              direction: 3,
-              x: 393,
-              y: 271
-            }
-          ],
-          animateCycleIndex: 0,
-          animateDuration: 0,
-          animateFrames: [],
-          animateType: '',
-          bkType: 0,
-          borderRadius: 0,
-          dash: 0,
-          data: '',
-          eventFns: ['link', 'doAnimate', 'doFn', 'doWindowFn'],
-          events: [],
-          fillStyle: '',
-          font: {
-            background: '',
-            color: '#222',
-            fontFamily:
-              '"Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial',
-            fontSize: 24,
-            fontStyle: 'normal',
-            fontWeight: 'bold',
-            lineHeight: 1.5,
-            textAlign: 'left',
-            textBaseline: 'middle'
-          },
-          fullTextRect: {
-            center: {
-              x: 393,
-              y: 256
-            },
-            ex: 443,
-            ey: 271,
-            height: 30,
-            width: 100,
-            x: 343,
-            y: 241
-          },
-          globalAlpha: 1,
-          gradientAngle: 0,
-          gradientRadius: 0.01,
-          iconRect: {
-            center: {
-              x: 0,
-              y: 0
-            },
-            ex: 0,
-            ey: 0,
-            height: 0,
-            width: 0,
-            x: 0,
-            y: 0
-          },
-          iconSize: 0,
-          id: 'c55bc38',
-          imageAlign: 'center',
-          lineDashOffset: 0,
-          lineWidth: 1,
-          locked: 0,
-          name: 'text',
-          offsetRotate: 0,
-          paddingBottom: 0,
-          paddingBottomNum: 0,
-          paddingLeft: 0,
-          paddingLeftNum: 0,
-          paddingRight: 0,
-          paddingRightNum: 0,
-          paddingTop: 0,
-          paddingTopNum: 0,
-          parentId: 'dde822',
-          rect: {
-            center: {
-              x: 393,
-              y: 256
-            },
-            ex: 443,
-            ey: 271,
-            height: 30,
-            width: 100,
-            x: 343,
-            y: 241
-          },
-          rectInParent: {
-            height: '30%',
-            rect: {
-              center: {
-                x: 393,
-                y: 256
-              },
-              ex: 443,
-              ey: 271,
-              height: 30,
-              width: 100,
-              x: 343,
-              y: 241
-            },
-            rotate: 0,
-            width: '33.333333333333336%',
-            x: '12.333333333333334%',
-            y: '15%'
-          },
-          rotate: 0,
-          rotatedAnchors: [
-            {
-              direction: 4,
-              x: 343,
-              y: 256
-            },
-            {
-              direction: 1,
-              x: 393,
-              y: 241
-            },
-            {
-              direction: 2,
-              x: 443,
-              y: 256
-            },
-            {
-              direction: 3,
-              x: 393,
-              y: 271
-            }
-          ],
-          stand: false,
-          strokeStyle: '#222',
-          tags: [],
-          text: '文字',
-          textOffsetX: 0,
-          textOffsetY: 0,
-          textRect: {
-            center: {
-              x: 393,
-              y: 267.25
-            },
-            ex: 443,
-            ey: 271,
-            height: 7.5,
-            width: 100,
-            x: 343,
-            y: 263.5
-          },
-          type: 0,
-          visible: true,
-          zRotate: 0
-        },
-        {
-          TID: 'cacbba',
-          anchors: [
-            {
-              direction: 4,
-              x: 343,
-              y: 295
-            },
-            {
-              direction: 1,
-              x: 393,
-              y: 280
-            },
-            {
-              direction: 2,
-              x: 443,
-              y: 295
-            },
-            {
-              direction: 3,
-              x: 393,
-              y: 310
-            }
-          ],
-          animateCycleIndex: 0,
-          animateDuration: 0,
-          animateFrames: [],
-          animateType: '',
-          bkType: 0,
-          borderRadius: 0,
-          dash: 0,
-          data: '',
-          eventFns: ['link', 'doAnimate', 'doFn', 'doWindowFn'],
-          events: [],
-          fillStyle: '',
-          font: {
-            background: '',
-            color: '#222',
-            fontFamily:
-              '"Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial',
-            fontSize: 12,
-            fontStyle: 'normal',
-            fontWeight: 'normal',
-            lineHeight: 1.5,
-            textAlign: 'left',
-            textBaseline: 'middle'
-          },
-          fullTextRect: {
-            center: {
-              x: 393,
-              y: 295
-            },
-            ex: 443,
-            ey: 310,
-            height: 30,
-            width: 100,
-            x: 343,
-            y: 280
-          },
-          globalAlpha: 1,
-          gradientAngle: 0,
-          gradientRadius: 0.01,
-          iconRect: {
-            center: {
-              x: 0,
-              y: 0
-            },
-            ex: 0,
-            ey: 0,
-            height: 0,
-            width: 0,
-            x: 0,
-            y: 0
-          },
-          iconSize: 0,
-          id: '5ceeeba6',
-          imageAlign: 'center',
-          lineDashOffset: 0,
-          lineWidth: 1,
-          locked: 0,
-          name: 'text',
-          offsetRotate: 0,
-          paddingBottom: 0,
-          paddingBottomNum: 0,
-          paddingLeft: 0,
-          paddingLeftNum: 0,
-          paddingRight: 0,
-          paddingRightNum: 0,
-          paddingTop: 0,
-          paddingTopNum: 0,
-          parentId: 'dde822',
-          rect: {
-            center: {
-              x: 393,
-              y: 295
-            },
-            ex: 443,
-            ey: 310,
-            height: 30,
-            width: 100,
-            x: 343,
-            y: 280
-          },
-          rectInParent: {
-            height: '30%',
-            rect: {
-              center: {
-                x: 393,
-                y: 295
-              },
-              ex: 443,
-              ey: 310,
-              height: 30,
-              width: 100,
-              x: 343,
-              y: 280
-            },
-            rotate: 0,
-            width: '33.333333333333336%',
-            x: '12.333333333333334%',
-            y: '54%'
-          },
-          rotate: 0,
-          rotatedAnchors: [
-            {
-              direction: 4,
-              x: 343,
-              y: 295
-            },
-            {
-              direction: 1,
-              x: 393,
-              y: 280
-            },
-            {
-              direction: 2,
-              x: 443,
-              y: 295
-            },
-            {
-              direction: 3,
-              x: 393,
-              y: 310
-            }
-          ],
-          stand: false,
-          strokeStyle: '#222',
-          tags: [],
-          text: '描述文字',
-          textOffsetX: 0,
-          textOffsetY: 0,
-          textRect: {
-            center: {
-              x: 393,
-              y: 306.25
-            },
-            ex: 443,
-            ey: 310,
-            height: 7.5,
-            width: 100,
-            x: 343,
-            y: 302.5
-          },
-          type: 0,
-          visible: true,
-          zRotate: 0
-        },
-        {
-          animateCycleIndex: 0,
-          animateDuration: 0,
-          animateFrames: [],
-          animateType: '',
-          bkType: 0,
-          borderRadius: 0,
-          children: [
-            {
-              animateCycleIndex: 0,
-              animateDuration: 0,
-              animateFrames: [],
-              animateType: '',
-              bkType: 0,
-              borderRadius: 0,
-              dash: 0,
-              data: '',
-              elementRendered: false,
-              eventFns: ['link', 'doAnimate', 'doFn', 'doWindowFn'],
-              events: [],
-              fillStyle: '#1890ffff',
-              font: {
-                background: '',
-                color: '#222',
-                fontFamily:
-                  '"Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial',
-                fontSize: 12,
-                fontStyle: 'normal',
-                fontWeight: 'normal',
-                lineHeight: 1.5,
-                textAlign: 'center',
-                textBaseline: 'middle'
-              },
-              fullTextRect: {
-                center: {
-                  x: 586,
-                  y: 290
-                },
-                ex: 593.1428571428572,
-                ey: 297.1428571428571,
-                height: 14.285714285714286,
-                width: 14.285714285714286,
-                x: 578.8571428571429,
-                y: 282.85714285714283
-              },
-              globalAlpha: 1,
-              gradientAngle: 0,
-              gradientRadius: 0.01,
-              iconRect: {
-                center: {
-                  x: 586,
-                  y: 295
-                },
-                ex: 591,
-                ey: 300,
-                height: 10,
-                width: 10,
-                x: 581,
-                y: 290
-              },
-              iconSize: 0,
-              id: 'a7c3847',
-              imageAlign: 'center',
-              lineDashOffset: 0,
-              lineWidth: 1,
-              name: 'circle',
-              offsetRotate: 0,
-              paddingBottom: 10,
-              paddingBottomNum: 10,
-              paddingLeft: 10,
-              paddingLeftNum: 10,
-              paddingRight: 10,
-              paddingRightNum: 10,
-              paddingTop: 10,
-              paddingTopNum: 10,
-              parentId: '653bb315',
-              rect: {
-                center: {
-                  x: 586,
-                  y: 290
-                },
-                ex: 596,
-                ey: 300,
-                height: 20,
-                width: 20,
-                x: 576,
-                y: 280
-              },
-              rectInParent: {
-                height: '100%',
-                rect: {
-                  center: {
-                    x: 593,
-                    y: 447
-                  },
-                  ex: 603,
-                  ey: 457,
-                  height: 20,
-                  width: 20,
-                  x: 583,
-                  y: 437
-                },
-                rotate: 0,
-                width: '100%',
-                x: '0%',
-                y: '0%'
-              },
-              stand: false,
-              strokeStyle: 'transparent',
-              tags: [],
-              text: '',
-              textOffsetX: 0,
-              textOffsetY: 0,
-              textRect: {
-                center: {
-                  x: 586,
-                  y: 294.16666666666663
-                },
-                ex: 591,
-                ey: 295,
-                height: 1.666666666666667,
-                width: 10,
-                x: 581,
-                y: 293.3333333333333
-              },
-              type: 0,
-              visible: true,
-              zRotate: 0
-            }
-          ],
-          dash: 0,
-          data: '',
-          eventFns: ['link', 'doAnimate', 'doFn', 'doWindowFn'],
-          events: [],
-          fillStyle: '#fff',
-          font: {
-            background: '',
-            color: '#222',
-            fontFamily:
-              '"Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial',
-            fontSize: 12,
-            fontStyle: 'normal',
-            fontWeight: 'normal',
-            lineHeight: 1.5,
-            textAlign: 'center',
-            textBaseline: 'middle'
-          },
-          fullTextRect: {
-            center: {
-              x: 586,
-              y: 290
-            },
-            ex: 600.2857142857142,
-            ey: 304.2857142857143,
-            height: 28.571428571428573,
-            width: 28.571428571428573,
-            x: 571.7142857142857,
-            y: 275.7142857142857
-          },
-          globalAlpha: 1,
-          gradientAngle: 0,
-          gradientRadius: 0.01,
-          iconRect: {
-            center: {
-              x: 586,
-              y: 290
-            },
-            ex: 596,
-            ey: 300,
-            height: 20,
-            width: 20,
-            x: 576,
-            y: 280
-          },
-          iconSize: 0,
-          id: '653bb315',
-          imageAlign: 'center',
-          lineDashOffset: 0,
-          lineWidth: 1,
-          locked: 0,
-          name: 'circle',
-          offsetRotate: 0,
-          paddingBottom: 10,
-          paddingBottomNum: 10,
-          paddingLeft: 10,
-          paddingLeftNum: 10,
-          paddingRight: 10,
-          paddingRightNum: 10,
-          paddingTop: 10,
-          paddingTopNum: 10,
-          parentId: 'dde822',
-          rect: {
-            center: {
-              x: 586,
-              y: 290
-            },
-            ex: 606,
-            ey: 310,
-            height: 40,
-            width: 40,
-            x: 566,
-            y: 270
-          },
-          rectInParent: {
-            height: '40%',
-            rect: {
-              center: {
-                x: 586,
-                y: 290
-              },
-              ex: 606,
-              ey: 310,
-              height: 40,
-              width: 40,
-              x: 566,
-              y: 270
-            },
-            rotate: 0,
-            width: '13.333333333333334%',
-            x: '86.66666666666667%',
-            y: '44%'
-          },
-          stand: false,
-          strokeStyle: '',
-          tags: [],
-          text: '',
-          textOffsetX: 0,
-          textOffsetY: 0,
-          textRect: {
-            center: {
-              x: 586,
-              y: 300.83333333333337
-            },
-            ex: 596,
-            ey: 305,
-            height: 8.333333333333334,
-            width: 20,
-            x: 576,
-            y: 296.6666666666667
-          },
-          type: 0,
-          visible: true,
-          zRotate: 0
-        }
-      ],
-      dash: 0,
-      data: '',
-      elementRendered: false,
-      eventFns: ['link', 'doAnimate', 'doFn', 'doWindowFn'],
-      events: [],
-      fillStyle: '',
-      font: {
-        background: '',
-        color: '',
-        fontFamily:
-          '"Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial',
-        fontSize: 12,
-        fontStyle: 'normal',
-        fontWeight: 'normal',
-        lineHeight: 1.5,
-        textAlign: 'center',
-        textBaseline: 'middle'
-      },
-      fullIconRect: {
-        center: {
-          x: 456,
-          y: 276
-        },
-        ex: 606,
-        ey: 326,
-        height: 100,
-        width: 300,
-        x: 306,
-        y: 226
-      },
-      fullTextRect: {
-        center: {
-          x: 456,
-          y: 276
-        },
-        ex: 606,
-        ey: 326,
-        height: 100,
-        width: 300,
-        x: 306,
-        y: 226
-      },
-      globalAlpha: 1,
-      gradientAngle: 0,
-      gradientRadius: 0.01,
-      iconRect: {
-        center: {
-          x: 456,
-          y: 263.5
-        },
-        ex: 606,
-        ey: 301,
-        height: 75,
-        width: 300,
-        x: 306,
-        y: 226
-      },
-      imageAlign: 'center',
-      lineDashOffset: 0,
-      lineWidth: 1,
-      name: 'combine',
-      rect: {
-        center: {
-          x: 456,
-          y: 276
-        },
-        ex: 606,
-        ey: 326,
-        height: 100,
-        width: 300,
-        x: 306,
-        y: 226
-      },
-
-      strokeStyle: 'transparent',
-      textOffsetX: 0,
-      textOffsetY: 0,
-      textRect: {
-        center: {
-          x: 456,
-          y: 313.5
-        },
-        ex: 606,
-        ey: 326,
-        height: 25,
-        width: 300,
-        x: 306,
-        y: 301
-      },
-      type: 0,
-      visible: true,
-      zRotate: 0
+        { name: '新建文件', keyboard: 'Ctrl+N', action: 'newFile' },
+        { name: '打开文件', keyboard: 'Ctrl+O', action: 'open' },
+        { name: '导入文件', keyboard: 'Ctrl+I', action: 'load' },
+        { name: '打开最近文件', recent: true },
+        {},
+        { name: '保存', keyboard: 'Ctrl+S', action: 'save' },
+        { name: '另存为', keyboard: 'Ctrl+Shift+I', action: 'saveAs' },
+        { name: '下载JSON文件', action: 'downloadJson' },
+        { name: '下载zip打包文件', action: 'downloadZip' },
+        {},
+        { name: '导出为HTML', action: 'downloadHtml' },
+        {},
+        { name: '下载为PNG', action: 'downloadPng' },
+        { name: '下载为SVG', action: 'downloadSvg' }
+      ]
+    },
+    {
+      name: '编辑',
+      icon: 't-icon t-edit',
+      children: [
+        { name: '撤销', keyboard: 'Ctrl+Z', action: 'undo' },
+        { name: '恢复', keyboard: 'Ctrl+Shift+Z', action: 'redo' },
+        {},
+        { name: '剪切', keyboard: 'Ctrl+X', action: 'cut' },
+        { name: '复制', keyboard: 'Ctrl+C', action: 'copy' },
+        { name: '粘贴', keyboard: 'Ctrl+V', action: 'paste' }
+      ]
+    },
+    {
+      name: '保存',
+      icon: 't-icon t-save',
+      action: 'save'
+    },
+    {
+      name: '撤销',
+      icon: 't-icon t-reply',
+      action: 'undo'
     }
-  }
-];
+  ],
+  share: true,
+  right: [
+    {
+      name: '预览',
+      icon: 't-icon t-attention',
+      action: 'preview'
+    },
+    {
+      name: '社区',
+      icon: 't-icon t-shequ',
+      children: [
+        { name: 'Github', url: 'https://github.com/le5le-com' },
+        { name: '核心库', url: 'https://github.com/le5le-com/topology' },
+        {
+          name: '版本发布',
+          url: 'https://www.yuque.com/alsmile/topology/installation#Uqqqx',
+          target: '_blank'
+        },
+        {
+          name: '技术交流群',
+          url: 'https://www.yuque.com/alsmile/topology/aboutus#FRK4N',
+          target: '_blank'
+        }
+      ]
+    },
+    {
+      name: '帮助',
+      icon: 't-icon t-help-circle',
+      right: true,
+      children: [
+        { name: '使用教程', url: 'https://juejin.im/user/61228379806536' },
+        {
+          name: '开发文档',
+          url: 'https://www.yuque.com/alsmile/topology/umsiq3',
+          target: '_blank'
+        },
+        {},
+        { name: '许可与申明', action: 'license' },
+        {
+          name: '服务与合作',
+          url: 'https://www.yuque.com/alsmile/topology/aboutus#gWc5X',
+          target: '_blank'
+        },
+        {},
+        {
+          name: '关于我们',
+          url: 'https://www.yuque.com/alsmile/topology/aboutus',
+          target: '_blank'
+        }
+      ]
+    },
+    {
+      name: '语言',
+      icon: 't-icon t-i18n',
+      right: true,
+      children: [
+        { name: '中文', action: 'i18nLocale', params: 'zh' },
+        { name: 'English  ', action: 'i18nLocale', params: 'en' }
+      ]
+    }
+  ],
+  login: true
+};
 
-export const images = [
+export const userMenus = [
+  { name: '个人中心', router: '/user/home?h=0' },
+  {},
   {
-    image:
-      'https://iconfont.alicdn.com/t/d2ffc78f-ce7a-4b02-94c9-7a2224bf8485.png'
-  }
+    name: '账号设置',
+    url: 'https://account.le5le.com/user/profile',
+    target: '_blank'
+  },
+  {},
+  { name: '退出', action: 'logout' }
 ];
