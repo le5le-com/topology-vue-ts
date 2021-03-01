@@ -86,7 +86,11 @@ export default class Home extends Vue {
     },
   };
 
-  data: any = {};
+  data: any = {
+    websocket: '',
+    mqttUrl: '',
+    component: !!this.$route.query.component,
+  };
 
   created() {
     const data = (window as any).topologyData;
