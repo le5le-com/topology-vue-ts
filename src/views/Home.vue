@@ -80,7 +80,7 @@ export default class Home extends Vue {
   materials: any = {
     topology: [],
     system: [],
-    uploadUrl: '/api/file',
+    uploadUrl: '/api/image',
     uploadHeaders: {
       Authorization: 'your token',
     },
@@ -135,10 +135,14 @@ export default class Home extends Vue {
       }
       this.data = ret;
     } else {
-      this.data = {
+      this.data = (window as any).topologyData || {
         component: !!this.$route.query.component,
         folder: this.$route.query.folder,
       };
+
+      setTimeout(() => {
+        (window as any).topologyData = null;
+      }, 200);
     }
   }
 
@@ -194,6 +198,71 @@ export default class Home extends Vue {
       this.materials.system.push(group[key]);
     }
 
+    const topologies: any = await axios.get('/api/topologies', {
+      params: {
+        pageIndex: 1,
+        pageCount: 100,
+        component: 'all',
+      },
+    });
+
+    if (topologies.data.list) {
+      this.materials.topology.push({
+        name: '未分类',
+        show: true,
+        expand: true,
+        list: [],
+      });
+      this.materials.user.push({
+        name: '未分类',
+        show: true,
+        expand: true,
+        list: [],
+      });
+      topologies.data.list.forEach((item: any) => {
+        if (item.component) {
+          this.materials.user.forEach((folder: any) => {
+            if (item.folder === folder.name) {
+              folder.list.push(item);
+            }
+
+            if (!item.folder && folder.name === '未分类') {
+              folder.list.push(item);
+            }
+          });
+        } else {
+          this.materials.topology.forEach((folder: any) => {
+            if (item.folder === folder.name) {
+              folder.list.push(item);
+            }
+
+            if (!item.folder && folder.name === '未分类') {
+              folder.list.push(item);
+            }
+          });
+        }
+      });
+    }
+
+    const componentImages: any = await axios.get('/api/user/component/images', {
+      params: {
+        pageIndex: 1,
+        pageCount: 100,
+      },
+    });
+
+    componentImages.data.list.forEach((item: any) => {
+      this.materials.user.forEach((folder: any) => {
+        if (item.folder === folder.name) {
+          folder.list.push(item);
+        }
+
+        if (!item.folder && folder.name === '未分类') {
+          folder.list.push(item);
+        }
+      });
+    });
+
     this.materials = Object.assign({}, this.materials);
   }
 
@@ -218,6 +287,12 @@ export default class Home extends Vue {
         break;
       case 'remove-user-folder':
         this.removeUserFolder(e.params);
+        break;
+      case 'addImageUrl':
+        this.addComponentImage(e.params);
+        break;
+      case 'deleteImage':
+        this.deleteComponentImage(e.params);
         break;
       case 'logout':
         // 退出登录
@@ -263,22 +338,20 @@ export default class Home extends Vue {
       case 'save':
         this.save();
         break;
-      case 'addImageUrl':
-        // 在“我的图片”里面添加了一张新图片
-        // this.addImageUrl(e.params);
-        break;
-      case 'deleteImage':
-        // 在“我的图片”里面删除了一张图片
-        // this.deleteImage(e.params);
+
+      case 'view':
+        this.$router.push({
+          path: '/',
+          query: { id: e.params.id, r: Date.now() + '' },
+        });
         break;
       case 'preview':
         // 点击工具栏“预览”
-
         // 保存当前编辑数据，方便预览时直接打开
         (window as any).topologyData = (window as any).topology.data;
         this.$router.push({
           path: '/preview',
-          query: { id: 'xxx', r: '1' },
+          query: { id: this.$route.query.id, r: Date.now() + '' },
         });
         break;
 
@@ -353,15 +426,12 @@ export default class Home extends Vue {
       }
 
       this.data = Object.assign({}, (window as any).topology.pureData());
-      this.data.image = file.url;
       if (this.data.component) {
         this.data.componentData = (window as any).topology.toComponent();
       }
 
-      for (const item of this.data.pens) {
-        delete item.elementLoaded;
-        delete item.elementRendered;
-      }
+      this.data.image = file.data.url;
+
       let ret: any;
       if (!this.data.name) {
         this.data.name = `topology.${new Date().toLocaleString()}`;
@@ -414,6 +484,27 @@ export default class Home extends Vue {
     }
 
     return true;
+  }
+
+  async addComponentImage(params: any) {
+    const ret: any = await axios.post('/api/user/component/image', params);
+    if (ret.error) {
+      return false;
+    }
+
+    this.getMaterials();
+  }
+
+  async deleteComponentImage(params: any) {
+    const ret: any = await axios.post(
+      '/api/user/component/image/delete',
+      params
+    );
+    if (ret.error) {
+      return false;
+    }
+
+    this.getMaterials();
   }
 }
 </script>

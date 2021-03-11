@@ -25,6 +25,8 @@ import Topology from 'topology-vue';
 
 import { Button, Icon } from 'ant-design-vue';
 
+import axios from 'axios';
+
 declare const topology: any;
 
 Vue.use(Button);
@@ -46,38 +48,35 @@ export default class Preview extends Vue {
   }
 
   created() {
-    const data = (window as any).topologyData;
-    if (data) {
-      this.locked = data.locked;
-      data.locked = 1;
-      this.data = { data: Object.assign({}, data) };
-      setTimeout(() => {
-        (window as any).topologyData = null;
-      }, 200);
-    } else {
-      this.init();
-    }
-
-    this.showTools = !!this.$route.query.r;
+    this.init();
   }
 
   async init() {
     if (this.$route.query.id) {
-      // const ret: any = await axios.get(
-      //   '/api/topology/' + this.$route.query.id,
-      //   {
-      //     params: {
-      //       version: this.$route.query.version,
-      //       view: 1,
-      //     },
-      //   }
-      // );
-      // if (ret.error) {
-      //   return;
-      // }
-      // ret.data.locked = 1;
-      // this.data = ret;
+      let ret: any = await axios.get('/api/topology/' + this.$route.query.id, {
+        params: {
+          version: this.$route.query.version,
+          view: 1,
+        },
+      });
+      if (ret.error) {
+        return;
+      }
+
+      if (!ret.pens) {
+        const data = ret.data;
+        delete ret.data;
+        ret = Object.assign(ret, data);
+      }
+      this.data = ret;
+    } else {
+      this.data = (window as any).topologyData || {};
+      setTimeout(() => {
+        (window as any).topologyData = null;
+      }, 200);
     }
+
+    this.showTools = !!this.$route.query.r;
   }
 
   onSizeWindow() {
@@ -85,7 +84,7 @@ export default class Preview extends Vue {
   }
 
   onSizeOri() {
-    topology.open(this.data.data);
+    topology.open(this.data);
   }
 
   onBack() {
