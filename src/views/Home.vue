@@ -250,18 +250,19 @@ export default class Home extends Vue {
         pageCount: 100,
       },
     });
+    if (componentImages.data.list) {
+      componentImages.data.list.forEach((item: any) => {
+        this.materials.user.forEach((folder: any) => {
+          if (item.folder === folder.name) {
+            folder.list.push(item);
+          }
 
-    componentImages.data.list.forEach((item: any) => {
-      this.materials.user.forEach((folder: any) => {
-        if (item.folder === folder.name) {
-          folder.list.push(item);
-        }
-
-        if (!item.folder && folder.name === '未分类') {
-          folder.list.push(item);
-        }
+          if (!item.folder && folder.name === '未分类') {
+            folder.list.push(item);
+          }
+        });
       });
-    });
+    }
 
     this.materials = Object.assign({}, this.materials);
   }
@@ -457,9 +458,7 @@ export default class Home extends Vue {
 
       tip && alert('保存成功！');
 
-      if (this.data.component) {
-        this.getMaterials();
-      }
+      this.getMaterials();
     });
   }
 
