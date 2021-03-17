@@ -29,14 +29,11 @@ declare const topology: any;
 
 Vue.use(Button);
 Vue.use(Icon);
+Vue.use(Topology);
 
-@Component({
-  components: {
-    Topology,
-  },
-})
+@Component({})
 export default class Preview extends Vue {
-  data: any = { data: {} };
+  data: any = {};
   locked = 0;
   showTools = true;
 
@@ -50,7 +47,7 @@ export default class Preview extends Vue {
     if (data) {
       this.locked = data.locked;
       data.locked = 1;
-      this.data = { data: Object.assign({}, data) };
+      this.data = Object.assign({}, data);
       setTimeout(() => {
         (window as any).topologyData = null;
       }, 200);
