@@ -18,7 +18,7 @@
     "vue-property-decorator": "^8.4.2",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0",
-    "topology-vue": "^0.4.3",
+    "topology-vue": "^0.5.1",
     "ant-design-vue": "^1.6.5",
     "axios": "^0.20.0",
     "copy-webpack-plugin": "^6.2.1",
