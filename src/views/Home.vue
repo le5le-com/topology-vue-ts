@@ -96,7 +96,7 @@ export default class Home extends Vue {
     const data = (window as any).topologyData;
     // 预览页返回，存在缓存数据
     if (data) {
-      this.data = { data: Object.assign({}, data) };
+      this.data = Object.assign({}, data);
       setTimeout(() => {
         (window as any).topologyData = null;
       }, 200);
