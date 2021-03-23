@@ -28,12 +28,15 @@ import {
 
 Vue.use(topology);
 
+declare const window: any;
+
 @Component({})
 export default class Home extends Vue {
   topologyConfigs = {
     license: {
-      key: 'le5le',
+      key: 'key',
       value: 'value',
+      version: 'version',
     },
     logo: {
       img: 'http://topology.le5le.com/assets/img/favicon.ico',
@@ -93,6 +96,8 @@ export default class Home extends Vue {
   };
 
   created() {
+    // 注册图形库
+    this.registerBuiness();
     const data = (window as any).topologyData;
     // 预览页返回，存在缓存数据
     if (data) {
@@ -102,6 +107,28 @@ export default class Home extends Vue {
       }, 200);
     } else {
     }
+  }
+
+  registerBuiness() {
+    if (window.registerTools) {
+      window.registerTools();
+    }
+    if (window.topologyTools) {
+      this.materials.system.push({
+        name: '企业图形库',
+        expand: false,
+        show: true,
+        list: window.topologyTools,
+      });
+    }
+    if (window.registerIot) {
+      window.registerIot(this.topologyConfigs.license);
+    }
+    this.materials.system.push({
+      iconUrl: '//at.alicdn.com/t/font_2366205_nnqrrnc9mta.css', // 替换成真实的地址
+      show: true,
+      list: [], // 此处留空数组就好，会自动填充
+    });
   }
 
   onEvent(e: { name: string; params: any }) {

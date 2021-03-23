@@ -14,7 +14,7 @@ export const defalutMaterialTabs = [
   }
 ];
 
-export const defalutMaterials = [
+export const defalutMaterials: any = [
   {
     name: '基本形状',
     expand: true,
@@ -974,6 +974,37 @@ export const defalutMaterials = [
                   }
                 ]
               }
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
+    name: '企业组件（需要购买）',
+    expand: true,
+    show: true,
+    list: [
+      {
+        name: '水池', // 工具栏提示文字
+        icon: 't-icon t-pool', // 工具栏显示字体图标
+        // image: 'url', //  图片URL 与上面 icon 二选一即可
+        data: {
+          // json对象，符合topology节点（Node）的数据结构，具体可以参照 API 文档
+          text: '水池', // 拖拽出现后现在在图形中心文字
+          rect: {
+            // 宽高必填项
+            width: 400,
+            height: 200
+          },
+          name: 'pool', // 该值作为水池的统一标识
+          data: {
+            // 我的数据
+            style: {
+              // 提前配置样式
+              background: '#1890ff',
+              borderWidth: 15,
+              borderColor: '#C2C2C2'
             }
           }
         }
