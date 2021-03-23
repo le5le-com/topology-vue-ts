@@ -30,6 +30,8 @@ import {
 
 Vue.use(topology);
 
+declare const window: any;
+
 @Component({})
 export default class Home extends Vue {
   topologyConfigs = {
@@ -109,6 +111,60 @@ export default class Home extends Vue {
     this.getMaterials();
 
     this.init();
+  }
+
+  registerBuiness() {
+    if (window.registerTools) {
+      window.registerTools();
+    }
+    if (window.topologyTools) {
+      this.materials.system.push({
+        name: '企业图形库',
+        expand: false,
+        show: true,
+        list: window.topologyTools,
+      });
+    }
+    if (window.registerIot) {
+      window.registerIot(this.topologyConfigs.license);
+      // 配置水池
+      this.materials.system.push({
+        name: '企业组件（需要购买）',
+        expand: true,
+        show: true,
+        list: [
+          {
+            name: '水池', // 工具栏提示文字
+            icon: 't-icon t-pool', // 工具栏显示字体图标
+            // image: 'url', //  图片URL 与上面 icon 二选一即可
+            data: {
+              // json对象，符合topology节点（Node）的数据结构，具体可以参照 API 文档
+              text: '水池', // 拖拽出现后现在在图形中心文字
+              rect: {
+                // 宽高必填项
+                width: 400,
+                height: 200,
+              },
+              name: 'pool', // 该值作为水池的统一标识
+              data: {
+                // 我的数据
+                style: {
+                  // 提前配置样式
+                  background: '#1890ff',
+                  borderWidth: 15,
+                  borderColor: '#C2C2C2',
+                },
+              },
+            },
+          },
+        ],
+      });
+    }
+    this.materials.system.push({
+      iconUrl: '//at.alicdn.com/t/font_2366205_nnqrrnc9mta.css', // 替换成真实的地址
+      show: true,
+      list: [], // 此处留空数组就好，会自动填充
+    });
   }
 
   @Watch('$route')
@@ -197,6 +253,9 @@ export default class Home extends Vue {
     for (const key in group) {
       this.materials.system.push(group[key]);
     }
+
+    // 注册图形库
+    this.registerBuiness();
 
     const topologies: any = await axios.get('/api/topologies', {
       params: {
