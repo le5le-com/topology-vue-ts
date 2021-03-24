@@ -49,29 +49,16 @@ export default class Home extends Vue {
     signupUrl: 'https://account.le5le.com',
     userMenus: userMenus,
     materialTabs: defalutMaterialTabs,
-    dataOptionsFn: (pen: any, key: string, value: string) => {
-      // pen - 当前画笔对象
-      // key - 表单输入左侧的属性名
-      // value - 仅下拉搜索时有效，当前输入文本
-      console.log('dataOptionsFn', pen, key, value);
-      // ************
-      // 根据实际业务场景 + 参数返回数组对象。
-      // Do sth.
-      // ************
-      return [
-        {
-          label: '选项1',
-          value: 1,
-        },
-        {
-          label: '选项2',
-          value: 2,
-        },
-        {
-          label: '选项3',
-          value: 3,
-        },
-      ];
+    dataOptionsFn: (pen: Node, key: string, value: string) => {
+      console.log(pen);
+
+      const keys = [{ value: 'aaa', label: '1' }];
+      const values = [{ value: '000', label: '1' }];
+      return {
+        keys,
+        // value: true, // 可配置，部门情况可能出现类型报错
+        values,
+      };
     },
   };
 
