@@ -317,6 +317,44 @@ export const defalutMaterials = [
           // strokeStyle: 'transparent',
           name: 'div'
         }
+      }, {
+        name: '涂鸦',
+        icon: 't-icon t-pencil',
+        class: '架构拓扑图',
+        data: {
+          rect: {
+            width: 0,
+            height: 0
+          },
+          name: 'graffiti',
+          doing: true
+        },
+      }, {
+        name: '涂鸦',
+        icon: 't-icon t-pencil-close',
+        class: '架构拓扑图',
+        data: {
+          rect: {
+            width: 0,
+            height: 0
+          },
+          closePath: true,
+          name: 'graffiti',
+          doing: true
+        },
+      }, {
+        name: '钢笔',
+        icon: 't-icon t-pen',
+        class: '架构拓扑图',
+        data: {
+          name: 'lines',
+          type: 1,
+          doing: true,
+          rect: {
+            width: 0,
+            height: 0
+          }
+        },
       }
     ]
   },
