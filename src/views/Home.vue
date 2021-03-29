@@ -351,6 +351,10 @@ export default class Home extends Vue {
         // Do sth.
         break;
 
+      case 't-topology-folder-open': // 打开文件夹
+        this.openFolder(e.params);
+        break;
+
       case 'openMaterialGroup':
         // 展开/折叠图标工具栏分组
         console.log('openMaterialGroup', e.params);
@@ -460,6 +464,39 @@ export default class Home extends Vue {
     let folder: any = await axios.post('/api/user/folder/delete', params);
     if (folder.data.error) {
       alert('删除文件夹失败：' + folder.data.error);
+    }
+  }
+
+  async openFolder(params: { folder: string; component: boolean }) {
+    const rep: any = await axios.get('/api/user/topologies', {
+      params: {
+        folder: params.folder,
+        component: params.component,
+        pageIndex: 1,
+        pageCount: 100,
+      },
+    });
+    // 对数据进行调整
+    if (params.component) {
+      // 组件
+      let userFolder = this.materials.user?.find((item: any) => {
+        return item.name === params.folder;
+      });
+      if (userFolder) {
+        // 存在该文件夹，且数据不为空
+        userFolder.list = rep.list ? rep.list : [];
+        userFolder.loading = false;
+      }
+    } else {
+      // 图纸
+      let topologyFolder = this.materials.topology?.find(
+        (item: any) => item.name === params.folder
+      );
+      if (topologyFolder) {
+        // 存在该文件夹，且数据不为空
+        topologyFolder.list = rep.list ? rep.list : [];
+        topologyFolder.loading = false;
+      }
     }
   }
 
