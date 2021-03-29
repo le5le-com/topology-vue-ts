@@ -259,6 +259,10 @@ export default class Home extends Vue {
         expand: true,
         list: [],
       });
+
+      if (!this.materials.user) {
+        this.materials.user = [];
+      }
       this.materials.user.push({
         name: '未分类',
         show: true,
