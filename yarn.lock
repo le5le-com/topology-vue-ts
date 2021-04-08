@@ -9232,10 +9232,10 @@ toidentifier@1.0.0:
   resolved "https://registry.npm.taobao.org/toidentifier/download/toidentifier-1.0.0.tgz#7e1be3470f1e77948bc43d94a3c8f4d7752ba553"
   integrity sha1-fhvjRw8ed5SLxD2Uo8j013UrpVM=
 
-topology-vue@^0.5.8:
-  version "0.5.8"
-  resolved "https://registry.npm.taobao.org/topology-vue/download/topology-vue-0.5.8.tgz#d0dd7f086a927a9a423c1cde5b15c24e6aa429e0"
-  integrity sha1-0N1/CGqSeppCPBzeWxXCTmqkKeA=
+topology-vue@^0.5.10:
+  version "0.5.10"
+  resolved "https://registry.npm.taobao.org/topology-vue/download/topology-vue-0.5.10.tgz#c6b8d2e45d51109a724e16aed8de3eda0cbd8c7c"
+  integrity sha1-xrjS5F1REJpyThau2N4+2gy9jHw=
 
 toposort@^1.0.0:
   version "1.0.7"
