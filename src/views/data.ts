@@ -267,6 +267,20 @@ export const defalutMaterials: any = [
         }
       },
       {
+        name: '连线',
+        icon: 't-icon t-curve2',
+        data: {
+          manualCps: true,
+          name: 'curve',
+          rect: {
+            height: 100,
+            width: 100
+          },
+          text: '',
+          type: 1
+        }
+      },
+      {
         name: 'cube',
         icon: 't-icon t-cube',
         id: 18,
