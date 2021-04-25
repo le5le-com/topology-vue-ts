@@ -72,6 +72,7 @@ export default class Home extends Vue {
         },
       ];
     },
+    // locale: 'zh',
   };
 
   user: any = {
@@ -80,6 +81,7 @@ export default class Home extends Vue {
 
   materials = {
     system: defalutMaterials,
+    iconUrls: ['http://at.alicdn.com/t/font_1331132_g7tv7fmj6c9.css'],
     uploadUrl: '/api/file',
     uploadHeaders: {
       Authorization: 'your token',

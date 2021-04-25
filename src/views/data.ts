@@ -1035,7 +1035,8 @@ export const logo = {
 
 export const iconMenus: any = {
   back: {
-    icon: 't-icon t-angle-left'
+    image: 'http://topology.le5le.com/assets/img/favicon.ico',
+    icon: 't-icon t-huanxing'
   },
   left: [
     {
