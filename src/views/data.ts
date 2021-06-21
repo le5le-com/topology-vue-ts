@@ -331,6 +331,26 @@ export const defalutMaterials: any = [
           // strokeStyle: 'transparent',
           name: 'div'
         }
+      },
+      {
+        name: '钢笔',
+        icon: 't-icon t-pen',
+        class: '架构拓扑图',
+        data: {
+          name: 'lines',
+          type: 0, //  0- 连线； 1- 节点
+          doing: true,
+          closePath: true, // 是否闭合
+          rect: {
+            width: 0,
+            height: 0
+          }
+        },
+        sort: 'a023',
+        state: 1,
+        base: true,
+        subClassId: '183bf0d2',
+        subClassName: '基本形状'
       }
     ]
   },
