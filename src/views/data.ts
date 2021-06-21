@@ -333,24 +333,78 @@ export const defalutMaterials: any = [
         }
       },
       {
+        name: '涂鸦',
+        icon: 't-icon t-pencil',
+        class: '架构拓扑图',
+        data: {
+          name: 'graffiti',
+          type: 0, //  0- 连线； 1- 节点
+          doing: true,
+          rect: {
+            width: 100,
+            height: 100
+          }
+        }
+      },
+      {
+        name: '涂鸦2',
+        icon: 't-icon t-pencil-close',
+        class: '架构拓扑图',
+        data: {
+          name: 'graffiti',
+          type: 0, //  0- 连线； 1- 节点
+          closePath: true, // 是否闭合
+          doing: true,
+          rect: {
+            width: 0,
+            height: 0
+          }
+        }
+      },
+      {
         name: '钢笔',
         icon: 't-icon t-pen',
         class: '架构拓扑图',
         data: {
           name: 'lines',
-          type: 0, //  0- 连线； 1- 节点
+          type: 1, //  1- 连线
+          doing: true,
+          rect: {
+            width: 0,
+            height: 0
+          }
+        }
+      },
+      {
+        name: '钢笔节点',
+        icon: 't-icon t-dakai',
+        class: '架构拓扑图',
+        data: {
+          isNode: true,
+          name: 'lines',
+          type: 0, //  0- 节点
+          doing: true,
+
+          rect: {
+            width: 0,
+            height: 0
+          }
+        }
+      },
+      {
+        name: '钢笔闭合节点',
+        icon: 't-icon t-quanfengbi',
+        class: '架构拓扑图',
+        data: {
+          name: 'lines',
+          type: 0, //  0- 节点
           doing: true,
           closePath: true, // 是否闭合
           rect: {
             width: 0,
             height: 0
           }
-        },
-        sort: 'a023',
-        state: 1,
-        base: true,
-        subClassId: '183bf0d2',
-        subClassName: '基本形状'
+        }
       }
     ]
   },
