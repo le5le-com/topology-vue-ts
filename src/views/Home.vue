@@ -39,7 +39,7 @@ export default class Home extends Vue {
       version: 'version',
     },
     logo: {
-      img: 'http://topology.le5le.com/assets/img/favicon.ico',
+      img: 'http://topology.le5le.com/img/favicon.ico',
       url: 'http://topology.le5le.com',
       target: '_blank',
       text: 'le5le',
