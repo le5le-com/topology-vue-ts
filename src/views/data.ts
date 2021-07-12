@@ -21,7 +21,7 @@ export const defalutMaterials: any = [
     show: true,
     list: [
       {
-        name: 'rectangle',
+        name: 'square',
         icon: 't-icon t-rect',
         id: 1,
         data: {
@@ -34,7 +34,7 @@ export const defalutMaterials: any = [
           paddingRight: 10,
           paddingTop: 10,
           paddingBottom: 10,
-          name: 'rectangle',
+          name: 'square',
           icon: '\ue64d',
           iconFamily: 'topology',
           iconColor: '#2f54eb'
