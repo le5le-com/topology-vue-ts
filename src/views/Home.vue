@@ -50,30 +50,23 @@ export default class Home extends Vue {
     userMenus: userMenus,
     materialTabs: defalutMaterialTabs,
     dataOptionsFn: (pen: any, key: string, value: string) => {
-      // pen - 当前画笔对象
-      // key - 表单输入左侧的属性名
-      // value - 仅下拉搜索时有效，当前输入文本
-      console.log('dataOptionsFn', pen, key, value);
-      // ************
-      // 根据实际业务场景 + 参数返回数组对象。
-      // Do sth.
-      // ************
-      return [
+      const keys = ['aaa', 'bbb'];
+      const values = [
         {
-          label: '选项1',
-          value: 1,
+          value: 111,
+          label: '111',
         },
         {
-          label: '选项2',
-          value: 2,
-        },
-        {
-          label: '选项3',
-          value: 3,
+          value: 222,
+          label: '222',
         },
       ];
-    },
-    // locale: 'zh',
+      return {
+        keys,
+        // value: 80,
+        values,
+      };
+    }
   };
 
   user: any = {
