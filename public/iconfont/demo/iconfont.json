@@ -1,0 +1,289 @@
+{
+  "id": "2548941",
+  "name": "（部分）电气工程常用字母和符号",
+  "font_family": "icon2",
+  "css_prefix_text": "icon2-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "21005612",
+      "name": "1-145",
+      "font_class": "1-145",
+      "unicode": "e91a",
+      "unicode_decimal": 59674
+    },
+    {
+      "icon_id": "21005620",
+      "name": "1-158",
+      "font_class": "1-158",
+      "unicode": "e922",
+      "unicode_decimal": 59682
+    },
+    {
+      "icon_id": "21005800",
+      "name": "2-026",
+      "font_class": "2-026",
+      "unicode": "eb36",
+      "unicode_decimal": 60214
+    },
+    {
+      "icon_id": "21005853",
+      "name": "1-333",
+      "font_class": "1-333",
+      "unicode": "eb6a",
+      "unicode_decimal": 60266
+    },
+    {
+      "icon_id": "21005855",
+      "name": "1-335",
+      "font_class": "1-335",
+      "unicode": "eb6c",
+      "unicode_decimal": 60268
+    },
+    {
+      "icon_id": "21005868",
+      "name": "2-104",
+      "font_class": "2-104",
+      "unicode": "eb79",
+      "unicode_decimal": 60281
+    },
+    {
+      "icon_id": "21005985",
+      "name": "2-245svg",
+      "font_class": "2-245svg",
+      "unicode": "ebee",
+      "unicode_decimal": 60398
+    },
+    {
+      "icon_id": "21005989",
+      "name": "2-253",
+      "font_class": "2-253",
+      "unicode": "ebf2",
+      "unicode_decimal": 60402
+    },
+    {
+      "icon_id": "21005993",
+      "name": "2-259",
+      "font_class": "2-259",
+      "unicode": "ebf6",
+      "unicode_decimal": 60406
+    },
+    {
+      "icon_id": "21005995",
+      "name": "2-040",
+      "font_class": "2-040",
+      "unicode": "ebf8",
+      "unicode_decimal": 60408
+    },
+    {
+      "icon_id": "21005996",
+      "name": "2-263",
+      "font_class": "2-263",
+      "unicode": "ebf9",
+      "unicode_decimal": 60409
+    },
+    {
+      "icon_id": "21006001",
+      "name": "2-264",
+      "font_class": "2-264",
+      "unicode": "ebfe",
+      "unicode_decimal": 60414
+    },
+    {
+      "icon_id": "21006003",
+      "name": "2-266",
+      "font_class": "2-266",
+      "unicode": "ec00",
+      "unicode_decimal": 60416
+    },
+    {
+      "icon_id": "21006016",
+      "name": "2-282",
+      "font_class": "2-282",
+      "unicode": "ec0d",
+      "unicode_decimal": 60429
+    },
+    {
+      "icon_id": "21006021",
+      "name": "3-186",
+      "font_class": "3-186",
+      "unicode": "ec12",
+      "unicode_decimal": 60434
+    },
+    {
+      "icon_id": "21006023",
+      "name": "3-187",
+      "font_class": "3-187",
+      "unicode": "ec14",
+      "unicode_decimal": 60436
+    },
+    {
+      "icon_id": "21006031",
+      "name": "3-196",
+      "font_class": "3-196",
+      "unicode": "ec1c",
+      "unicode_decimal": 60444
+    },
+    {
+      "icon_id": "21006040",
+      "name": "2-277",
+      "font_class": "2-277",
+      "unicode": "ec25",
+      "unicode_decimal": 60453
+    },
+    {
+      "icon_id": "21006046",
+      "name": "3-208",
+      "font_class": "3-208",
+      "unicode": "ec2b",
+      "unicode_decimal": 60459
+    },
+    {
+      "icon_id": "21006056",
+      "name": "2-101",
+      "font_class": "2-101",
+      "unicode": "ec35",
+      "unicode_decimal": 60469
+    },
+    {
+      "icon_id": "21006061",
+      "name": "2-110",
+      "font_class": "2-110",
+      "unicode": "ec3a",
+      "unicode_decimal": 60474
+    },
+    {
+      "icon_id": "21006064",
+      "name": "2-177",
+      "font_class": "2-177",
+      "unicode": "ec3d",
+      "unicode_decimal": 60477
+    },
+    {
+      "icon_id": "21006067",
+      "name": "2-119",
+      "font_class": "2-119",
+      "unicode": "ec40",
+      "unicode_decimal": 60480
+    },
+    {
+      "icon_id": "21006068",
+      "name": "2-123",
+      "font_class": "2-123",
+      "unicode": "ec41",
+      "unicode_decimal": 60481
+    },
+    {
+      "icon_id": "21006071",
+      "name": "2-249",
+      "font_class": "2-249",
+      "unicode": "ec44",
+      "unicode_decimal": 60484
+    },
+    {
+      "icon_id": "21006076",
+      "name": "2-258",
+      "font_class": "2-258",
+      "unicode": "ec49",
+      "unicode_decimal": 60489
+    },
+    {
+      "icon_id": "21006077",
+      "name": "2-268",
+      "font_class": "2-268",
+      "unicode": "ec4a",
+      "unicode_decimal": 60490
+    },
+    {
+      "icon_id": "21006081",
+      "name": "2-195",
+      "font_class": "2-195",
+      "unicode": "ec4e",
+      "unicode_decimal": 60494
+    },
+    {
+      "icon_id": "21006085",
+      "name": "3-200",
+      "font_class": "3-200",
+      "unicode": "ec52",
+      "unicode_decimal": 60498
+    },
+    {
+      "icon_id": "21037969",
+      "name": "2-070",
+      "font_class": "2-0701",
+      "unicode": "e9fa",
+      "unicode_decimal": 59898
+    },
+    {
+      "icon_id": "21037970",
+      "name": "2-075",
+      "font_class": "2-075",
+      "unicode": "e9fd",
+      "unicode_decimal": 59901
+    },
+    {
+      "icon_id": "21037971",
+      "name": "2-072",
+      "font_class": "2-072",
+      "unicode": "ea47",
+      "unicode_decimal": 59975
+    },
+    {
+      "icon_id": "21037972",
+      "name": "2-078",
+      "font_class": "2-078",
+      "unicode": "ea48",
+      "unicode_decimal": 59976
+    },
+    {
+      "icon_id": "21037975",
+      "name": "2-079",
+      "font_class": "2-079",
+      "unicode": "ea4b",
+      "unicode_decimal": 59979
+    },
+    {
+      "icon_id": "21039623",
+      "name": "2-080",
+      "font_class": "2-080",
+      "unicode": "ea51",
+      "unicode_decimal": 59985
+    },
+    {
+      "icon_id": "21042967",
+      "name": "2-226",
+      "font_class": "2-226",
+      "unicode": "ea5b",
+      "unicode_decimal": 59995
+    },
+    {
+      "icon_id": "21412506",
+      "name": "5-6-4",
+      "font_class": "5-6-4",
+      "unicode": "ea61",
+      "unicode_decimal": 60001
+    },
+    {
+      "icon_id": "21439074",
+      "name": "5-7-4",
+      "font_class": "5-7-4",
+      "unicode": "ea66",
+      "unicode_decimal": 60006
+    },
+    {
+      "icon_id": "21439582",
+      "name": "5-7-5",
+      "font_class": "5-7-5",
+      "unicode": "ea67",
+      "unicode_decimal": 60007
+    },
+    {
+      "icon_id": "20209968",
+      "name": "LA-1",
+      "font_class": "LA-1",
+      "unicode": "e7b6",
+      "unicode_decimal": 59318
+    }
+  ]
+}

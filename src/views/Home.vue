@@ -37,12 +37,14 @@ export default class Home extends Vue {
   topologyConfigs = {
     license: {
       key: 'le5le',
-      value: 'value',
+      value: 'le5le',
+      version: 'le5le',
     },
     logo: {
-      img: 'http://topology.le5le.com/assets/img/favicon.ico',
+      img: '/img/icons/favicon-32x32.png',
       url: 'http://topology.le5le.com',
       target: '_blank',
+      text: 'Topology',
     },
     menus: iconMenus,
     loginUrl: 'https://account.le5le.com',
@@ -148,7 +150,7 @@ export default class Home extends Vue {
       });
     }
     this.materials.system.push({
-      iconUrl: '//at.alicdn.com/t/font_2366205_nnqrrnc9mta.css', // 替换成真实的地址
+      iconUrl: '/iconfont/demo/iconfont.css', // 替换成真实的地址
       show: true,
       list: [], // 此处留空数组就好，会自动填充
     });
