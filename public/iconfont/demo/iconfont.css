@@ -1,0 +1,175 @@
+@font-face {
+  font-family: "icon2"; /* Project id 2548941 */
+  src: url('iconfont.woff2?t=1626758588561') format('woff2'),
+       url('iconfont.woff?t=1626758588561') format('woff'),
+       url('iconfont.ttf?t=1626758588561') format('truetype');
+}
+
+.icon2 {
+  font-family: "icon2" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon2-1-145:before {
+  content: "\e91a";
+}
+
+.icon2-1-158:before {
+  content: "\e922";
+}
+
+.icon2-2-026:before {
+  content: "\eb36";
+}
+
+.icon2-1-333:before {
+  content: "\eb6a";
+}
+
+.icon2-1-335:before {
+  content: "\eb6c";
+}
+
+.icon2-2-104:before {
+  content: "\eb79";
+}
+
+.icon2-2-245svg:before {
+  content: "\ebee";
+}
+
+.icon2-2-253:before {
+  content: "\ebf2";
+}
+
+.icon2-2-259:before {
+  content: "\ebf6";
+}
+
+.icon2-2-040:before {
+  content: "\ebf8";
+}
+
+.icon2-2-263:before {
+  content: "\ebf9";
+}
+
+.icon2-2-264:before {
+  content: "\ebfe";
+}
+
+.icon2-2-266:before {
+  content: "\ec00";
+}
+
+.icon2-2-282:before {
+  content: "\ec0d";
+}
+
+.icon2-3-186:before {
+  content: "\ec12";
+}
+
+.icon2-3-187:before {
+  content: "\ec14";
+}
+
+.icon2-3-196:before {
+  content: "\ec1c";
+}
+
+.icon2-2-277:before {
+  content: "\ec25";
+}
+
+.icon2-3-208:before {
+  content: "\ec2b";
+}
+
+.icon2-2-101:before {
+  content: "\ec35";
+}
+
+.icon2-2-110:before {
+  content: "\ec3a";
+}
+
+.icon2-2-177:before {
+  content: "\ec3d";
+}
+
+.icon2-2-119:before {
+  content: "\ec40";
+}
+
+.icon2-2-123:before {
+  content: "\ec41";
+}
+
+.icon2-2-249:before {
+  content: "\ec44";
+}
+
+.icon2-2-258:before {
+  content: "\ec49";
+}
+
+.icon2-2-268:before {
+  content: "\ec4a";
+}
+
+.icon2-2-195:before {
+  content: "\ec4e";
+}
+
+.icon2-3-200:before {
+  content: "\ec52";
+}
+
+.icon2-2-0701:before {
+  content: "\e9fa";
+}
+
+.icon2-2-075:before {
+  content: "\e9fd";
+}
+
+.icon2-2-072:before {
+  content: "\ea47";
+}
+
+.icon2-2-078:before {
+  content: "\ea48";
+}
+
+.icon2-2-079:before {
+  content: "\ea4b";
+}
+
+.icon2-2-080:before {
+  content: "\ea51";
+}
+
+.icon2-2-226:before {
+  content: "\ea5b";
+}
+
+.icon2-5-6-4:before {
+  content: "\ea61";
+}
+
+.icon2-5-7-4:before {
+  content: "\ea66";
+}
+
+.icon2-5-7-5:before {
+  content: "\ea67";
+}
+
+.icon2-LA-1:before {
+  content: "\e7b6";
+}
+

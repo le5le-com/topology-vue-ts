@@ -1035,7 +1035,7 @@ export const iconMenus: any = {
       name: '文件',
       icon: 't-icon t-folder',
       children: [
-        { name: '新建文件', keyboard: 'Ctrl+N', action: 'newFile' },
+        { name: '新建文件111', keyboard: 'Ctrl+N', action: 'newFile' },
         { name: '打开文件', keyboard: 'Ctrl+O', action: 'open' },
         { name: '导入文件', keyboard: 'Ctrl+I', action: 'load' },
         { name: '打开最近文件', recent: true },

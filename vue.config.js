@@ -5,11 +5,11 @@ module.exports = {
     devServer: {
       proxy: {
         '^/api': {
-          target: 'http://127.0.0.1:8210',
+          target: 'http://192.168.1.25:8210',
           changeOrigin: true
         },
         '^/image': {
-          target: 'http://127.0.0.1:8210',
+          target: 'http://192.168.1.25:8210',
           changeOrigin: true
         }
       }
